@@ -3,6 +3,7 @@ package racingcar.domain;
 import racingcar.util.RandomNumberGenerator;
 
 public class Car {
+    private static final int MOVE_THRESHOLD = 4;
     private final String name;
     private int position = 0;
 
@@ -11,8 +12,12 @@ public class Car {
         this.name = name;
     }
 
-    public void move(){
+    public void move() {
         int randomValue = RandomNumberGenerator.generate();
+        move(randomValue);
+    }
+
+    public void move(int randomValue){
         if (randomValue >= 4){
             position++;
         }

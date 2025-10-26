@@ -1,7 +1,6 @@
 package racingcar.domain;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,7 +15,7 @@ public class RacingGame {
 
     public void race() {
         for (Car car : cars) {
-            car.move();
+            car.move(4);
         }
     }
 
